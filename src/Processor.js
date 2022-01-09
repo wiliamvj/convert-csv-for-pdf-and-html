@@ -1,4 +1,4 @@
-class Procesor {
+class Processor {
   static Process(data) {
     var row = data.split('\n');
     var rows = [];
@@ -12,4 +12,4 @@ class Procesor {
   }
 }
 
-module.exports = Procesor;
+module.exports = Processor;

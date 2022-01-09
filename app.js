@@ -10,7 +10,10 @@ async function main() {
 
   var users = new Table(processorsData);
 
-  console.log(users.rows);
+  users.rows.push(['Wiliam', 'NodeJS']);
+
+  console.log(users.RowCount);
+  console.log(users.ColumnCount);
 }
 
 main();
