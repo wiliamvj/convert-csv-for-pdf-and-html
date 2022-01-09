@@ -1,7 +1,14 @@
 class Procesor {
   static Process(data) {
-    var rows = data.split('\n');
-    console.log(rows);
+    var row = data.split('\n');
+    var rows = [];
+
+    row.forEach((row) => {
+      var arr = row.split(',');
+      rows.push(arr);
+    });
+
+    return rows;
   }
 }
 
