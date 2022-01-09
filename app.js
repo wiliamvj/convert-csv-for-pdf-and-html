@@ -1,6 +1,7 @@
 const Reader = require('./src/Reader');
 const Processor = require('./src/Processor');
 const Table = require('./src/Table');
+const HtmlParser = require('./src/HtmlParser');
 
 const readerFile = new Reader();
 
@@ -10,10 +11,9 @@ async function main() {
 
   var users = new Table(processorsData);
 
-  users.rows.push(['Wiliam', 'NodeJS']);
+  var html = await HtmlParser.Parse(users);
 
-  console.log(users.RowCount);
-  console.log(users.ColumnCount);
+  console.log(html);
 }
 
 main();
